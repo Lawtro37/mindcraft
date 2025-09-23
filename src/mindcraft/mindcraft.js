@@ -16,7 +16,6 @@ export async function init(host_public=false, port=8080, auto_open_ui=true) {
         return;
     }
     mindserver = createMindServer(host_public, port);
-    port = port;
     connected = true;
     if (auto_open_ui) {
         setTimeout(() => {
