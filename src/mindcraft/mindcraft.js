@@ -8,7 +8,7 @@ let mindserver;
 let connected = false;
 let agent_processes = {};
 let agent_count = 0;
-let port = settings.mindcraft_port || 8080;
+let port = settings.mindserver_port || 8080;
 
 export async function init(host_public=false, port=8080, auto_open_ui=true) {
     if (connected) {
