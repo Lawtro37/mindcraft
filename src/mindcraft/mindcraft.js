@@ -1,13 +1,14 @@
 import { createMindServer, registerAgent, numStateListeners } from './mindserver.js';
 import { AgentProcess } from '../process/agent_process.js';
 import { getServer } from './mcserver.js';
+import settings from '../../settings.js';
 import open from 'open';
 
 let mindserver;
 let connected = false;
 let agent_processes = {};
 let agent_count = 0;
-let port = 8080;
+let port = settings.port || 8080;
 
 export async function init(host_public=false, port=8080, auto_open_ui=true) {
     if (connected) {
